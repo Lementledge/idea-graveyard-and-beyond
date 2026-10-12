@@ -36,6 +36,8 @@ Every entry adheres to the schema defined in `templates/idea-template.md`, docum
 
 | Title | Domain | Primary Bottleneck | Status |
 | :--- | :--- | :--- | :--- |
+| [Modular Recursive AGI Architecture](idea/algorithm/modular-recursive-agi-architecture.md) | Algorithm / AGI Theory | Dynamic DSLs & Verifier Design | `Formulated Hypothesis` |
+
 
 *(Append new blueprints to this table as they are added to domain directories.)*
 
