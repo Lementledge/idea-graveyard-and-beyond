@@ -36,9 +36,6 @@ Every entry adheres to the schema defined in `templates/idea-template.md`, docum
 
 | Title | Domain | Primary Bottleneck | Status |
 | :--- | :--- | :--- | :--- |
-| [Example: Multi-tiered Lossy Cache](systems-and-cs/example.md) | Cognitive / Systems | Hardware Architecture & Benchmarking | `Formulated Hypothesis` |
-| [Example: Discrete Unit Square Packing](theoretical/example.md) | Discrete Geometry | Formal Analytical Proof | `Draft` |
-| [Example: Chiral Amplification Model](interdisciplinary/example.md) | Prebiotic Chemistry | Wet-lab Synthesis Required | `Formulated Hypothesis` |
 
 *(Append new blueprints to this table as they are added to domain directories.)*
 
