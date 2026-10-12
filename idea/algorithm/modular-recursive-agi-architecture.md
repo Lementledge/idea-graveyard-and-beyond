@@ -12,7 +12,7 @@
 ## 1. Context & Motivation
 
 Current paradigms in Artificial General Intelligence research frequently oscillate between two extremes:
-1. **Monolithic Scaling:** Scaling dense foundation models within fixed token vocabularies and invariant latent dimensionalities ($$d_{\text{model}}$$), resulting in combinatorial recombination without true conceptual novelty.
+1. **Monolithic Scaling:** Scaling dense foundation models within fixed token vocabularies and invariant latent dimensionalities ($d_{\text{model}}$), resulting in combinatorial recombination without true conceptual novelty.
 2. **Unconstrained Self-Modification:** Theoretical recursive self-improvement models that attempt to rewrite their own internal weights or core computational graphs, which inevitably face catastrophic forgetting, optimization collapse, and alignment unpredictability.
 
 Human biological intelligence demonstrates that general intelligence does not require rewiring foundational cortical structures when acquiring higher-order capabilities. Biological humans do not modify neural substrates directly to formulate calculus; rather, they externalize representations, construct symbolic tools, and verify them against physical reality. General intelligence should therefore be framed as an **externalizing modular synthesis engine** rather than a self-modifying monolithic system.
@@ -33,7 +33,7 @@ A general intelligence architecture requires at least three non-negotiable opera
    - Prevents unconstrained semantic drift and plausible confabulation by enforcing formal falsifiability (e.g., interaction with compilers, physical sensors, formal proof assistants, or mathematical invariants).
 
 3. **Recursive Toolmaking (Bootstrapping):**
-   - The capability to leverage current-tier computational competence (N) to construct, test, and register specialized modules that operate at competence (N+1).
+   - The capability to leverage current-tier computational competence ($N$) to construct, test, and register specialized modules that operate at competence ($N+1$).
    - Intelligence scales through the accumulation of externalized, composable functional units rather than unbounded internal parameter expansion.
 
 ### Architectural Invariant: Stable Core, Dynamic Ecosystem
