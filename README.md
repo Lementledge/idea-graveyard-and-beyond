@@ -42,8 +42,6 @@ Every entry adheres to the schema defined in `templates/idea-template.md`, docum
 | [Reconstructive Attractor Dynamics](idea/algorithm/reconstructive-attractor-dynamics-neural-warmup.md) | Algorithm / Neurodynamics | Non-Equilibrium Stability & Analog Hardware Mismatch | `Formulated Hypothesis` |
 
 
-*(Append new blueprints to this table as they are added to domain directories.)*
-
 ---
 
 ## 🏷️ Status Taxonomy
