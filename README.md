@@ -22,7 +22,7 @@ Rather than letting these concepts decay in private notebooks, this repository a
 │   ├── nature/        # Focuses on the physical, mind-independent natural world
 │   ├── social/        # Focuses on human behavior, society, culture, and meaning
 │   ├── algorithm/     # Inputs to outputs, mathematics, and computing
-│   ├── others/        # Unsorted or cross-disciplinary concepts
+│   └── others/        # Unsorted or cross-disciplinary concepts
 │
 ├── templates/         # Standard blueprint schema (idea-template.md)
 ├── CONTRIBUTING.md    # Collaboration standards, critique rules, and attribution guidelines
