@@ -44,4 +44,4 @@ External ideas are welcome, provided they meet the repository's baseline standar
 
 ## Attribution & Intellectual Property
 
-By contributing to this repository, you agree that your contributions will be licensed under the repository's open license (e.g., **CC-BY 4.0** for text/documentation, **MIT** for code snippets). If you develop an independent project or publication based on an idea here, attribution is appreciated though not strictly restrictive.
+By contributing to this repository, you agree that your contributions will be licensed under the repository's open license. If you develop an independent project or publication based on an idea here, attribution is appreciated though not strictly restrictive.
