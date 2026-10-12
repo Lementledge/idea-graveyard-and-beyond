@@ -63,4 +63,4 @@ Please review [CONTRIBUTING.md](CONTRIBUTING.md) before participating:
 
 ## 📄 License
 
-- All conceptual writings, specifications, and documentation are licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+- All conceptual writings, specifications, and documentation are licensed under [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/).
