@@ -16,18 +16,18 @@ Rather than letting these concepts decay in private notebooks, this repository a
 ---
 
 ## 🗂️ Taxonomy & Repository Structure
-
+```
 .
-├── idea/              # Where all the ideas are
-│   ├── nature/        # Focuses on the physical, mind-independent natural world to find universal laws and predictions
-│   ├── social/        # Focuses on human behavior, society, culture, and meaning.
-│   ├── algorithm/     # Focuses on processing inputs to produce a desired output or solve a defined problem in mathematics and computing.
-│   ├── others/        # Unsorted or does not fit in listed category
+├── idea/
+│   ├── nature/        # Focuses on the physical, mind-independent natural world
+│   ├── social/        # Focuses on human behavior, society, culture, and meaning
+│   ├── algorithm/     # Inputs to outputs, mathematics, and computing
+│   ├── others/        # Unsorted or cross-disciplinary concepts
 │
 ├── templates/         # Standard blueprint schema (idea-template.md)
 ├── CONTRIBUTING.md    # Collaboration standards, critique rules, and attribution guidelines
 └── README.md          # Global index and repository manifest
-
+```
 Every entry adheres to the schema defined in `templates/idea-template.md`, documenting the **Hypothesis**, **Mechanics**, **Impact**, **Bottlenecks**, and **Attack Vectors**.
 
 ---
