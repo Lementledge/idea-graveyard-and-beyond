@@ -38,6 +38,7 @@ Every entry adheres to the schema defined in `templates/idea-template.md`, docum
 | :--- | :--- | :--- | :--- |
 | [Modular Recursive AGI Architecture](idea/algorithm/modular-recursive-agi-architecture.md) | Algorithm / AGI Theory | Dynamic DSLs & Verifier Design | `Formulated Hypothesis` |
 | [Continuous Super-Dilution Asymmetric Synthesis](idea/nature/continuous-super-dilution-asymmetric-synthesis.md) | Nature / Reaction Engineering | OSN Solvent Loop & Spacetime Yield | `Formulated Hypothesis` |
+| [The Feudal Hangover in East Asian Credentialism](idea/social/east-asian-credentialism-feudal-hangover.md) | Social / Institutional Economics | Quantifying Cultural Transmission Inertia | `Formulated Hypothesis` |
 
 
 
