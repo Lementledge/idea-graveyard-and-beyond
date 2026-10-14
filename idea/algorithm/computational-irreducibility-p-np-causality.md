@@ -45,4 +45,32 @@
 
 ## 3. Potential Impact & Value
 
-- **Unifying Complexity Classes with General Relativity:** Provides a novel lens for Wheeler-DeWitt equations where time drops out of the fundamental Hamiltonian ($H\vert{}\Psi\rangle = 0$), interpreting the static "Block Universe" as an $O(1)$
+- **Unifying Complexity Classes with General Relativity:** Provides a novel lens for Wheeler-DeWitt equations where time drops out of the fundamental Hamiltonian ($H|\Psi\rangle = 0$), interpreting the static "Block Universe" as an $O(1)$ closed-form limit and dynamic experiential time as the lower bound of P-complete sequentiality.
+- **Cosmological Teleology:** Demonstrates mathematically that a universe with meaningful historical processes requires the preservation of computational hardness bounds.
+
+---
+
+## 4. The Bottlenecks (Why It's Beyond Current Reach)
+
+- **Formal Proofs of Non-Parallelizability for Gauge Theories:** Lacking formal mathematical proofs that discretized field equations (e.g., lattice QCD or non-abelian gauge fields) are strictly $P$-complete under infinite spatial concurrency.
+- **Non-Standard Real-Time Physics Models:** Formulating continuous-variable equivalents of the $NC$ vs. $P$ vs. $NP$ hierarchy within curved quantum spacetime.
+
+---
+
+## 5. Potential Attack Vectors & Next Steps
+
+- **Discrete Toy CA Simulation:**
+  - Implement a 1D cellular automaton (e.g., Rule 110) vs. an additive rule (e.g., Rule 90 which admits $O(\log n)$ matrix-exponentiation shortcuts).
+  - Prove how Rule 90 enables state prediction in logarithmic time without intermediate step computation, contrasting it with Rule 110's strict step-by-step necessity.
+- **Open Questions:**
+  1. Does quantum entanglement provide a physical mechanism that circumvents classical $P$-completeness without violating relativistic causality (no-signaling theorem)?
+  2. Is thermodynamic entropy simply the measure of computational steps discarded by an observer incapable of $O(1)$ closed-form shortcuts?
+
+---
+
+## 6. References & Prior Art
+
+- **Greenlaw, R., Hoover, H. J., & Ruzzo, W. L. (1995):** Limits to Parallel Computation: P-Completeness Theory. Oxford University Press.
+- **Wolfram, S. (2002):** A New Kind of Science (Principle of Computational Irreducibility).
+- **Aaronson, S. (2005):** NP-complete Problems and Physical Reality. ACM SIGACT News, 36(1), 30-52.
+- **Barwise, J. (1977):** Handbook of Mathematical Logic (Formalization of constructive temporal logics).
