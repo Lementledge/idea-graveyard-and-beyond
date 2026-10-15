@@ -24,6 +24,7 @@ Rather than letting these concepts decay in private notebooks, this repository a
 │   ├── algorithm/     # Inputs to outputs, mathematics, and computing
 │   └── others/        # Unsorted or cross-disciplinary concepts
 │
+├── simulations        # Toy models
 ├── templates/         # Standard blueprint schema (idea-template.md)
 ├── CONTRIBUTING.md    # Collaboration standards, critique rules, and attribution guidelines
 └── README.md          # Global index and repository manifest
