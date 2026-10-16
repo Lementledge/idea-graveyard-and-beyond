@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
 
-# --- 1. THÔNG SỐ ĐỘNG HỌC & CẤU HÌNH NỚI RỘNG ÁP SUẤT ---
+# --- 1. KINETIC PARAMETERS & PRESSURE MITIGATION CONFIGURATION ---
 k0_base = 25.0        # L/(mol*s)
 k_cat = 15.0          # 1/s
 K_A = 1000.0          # L/mol
@@ -15,16 +15,16 @@ P_L_bed = 0.005       # ee_bed = 98%
 V_reactor = 1.0       # L
 F_feed_max = 1e-4     # L/s (0.1 mL/s)
 
-# HƯỚNG 1 & 3: TĂNG F_BLEED VÀ HẠ NỒNG ĐỘ DÒNG NẠP
-F_bleed = 3.0e-5      # Tăng từ 1e-5 lên 3e-5 L/s (chiếm 30% F_feed)
-A_feed = 0.2          # Giảm từ 0.5 M xuống 0.2 M
-B_feed = 0.2          # Giảm từ 0.5 M xuống 0.2 M
-R_prod = 0.98         # Màng OSN
+# STRATEGY 1 & 3: INCREASE F_BLEED AND LOWER FEED CONCENTRATION
+F_bleed = 3.0e-5      # Increased from 1e-5 to 3e-5 L/s (30% of F_feed)
+A_feed = 0.2          # Reduced from 0.5 M to 0.2 M
+B_feed = 0.2          # Reduced from 0.5 M to 0.2 M
+R_prod = 0.98         # OSN membrane
 
-# Hằng số thủy lực & nhiệt động học
+# Hydraulic & thermodynamic constants
 mu_solvent = 1.0e-3   # Pa*s
 channel_L = 1.0       # m
-d_hydraulic = 5e-4    # m (500 micromet)
+d_hydraulic = 5e-4    # m (500 micrometers)
 P_max_membrane = 30e5 # 30 bar = 3e6 Pa
 alpha_shear = 5.0     # s/m
 
@@ -37,14 +37,14 @@ def calc_friction_dp(v):
 def calc_osmotic_pressure(conc_diff_M):
     return (conc_diff_M * 1000.0) * R_gas * Temp_K
 
-# --- 2. HỆ PHƯƠNG TRÌNH ODE HỆ THỐNG ---
+# --- 2. SYSTEM ODE EQUATIONS ---
 def make_system_ode(v_loop):
     K_inh_eff = K_inh_base / (1.0 + alpha_shear * v_loop)
     
     def ode(t, y):
         A, B, D, L = max(y[0], 0), max(y[1], 0), max(y[2], 0), max(y[3], 0)
         
-        # Adaptive Dosing Controller (Ngưỡng 5e-5 M)
+        # Adaptive Dosing Controller (5e-5 M threshold)
         A_thresh = 5e-5
         F_in = F_feed_max / (1.0 + np.exp((A - A_thresh) / (0.15 * A_thresh)))
         F_perm = max(F_in - F_bleed, 0)
@@ -71,8 +71,8 @@ def make_system_ode(v_loop):
         return [dA, dB, dD, dL, dND]
     return ode
 
-# --- 3. QUÉT THAM SỐ TOÀN DẢI VẬN TỐC ---
-print("Đang quét dải vận tốc v_loop để kiểm tra vùng an toàn mở rộng...")
+# --- 3. FULL VELOCITY SWEEP ---
+print("Scanning v_loop velocity range to inspect expanded safe window...")
 v_sweep = np.linspace(0.05, 25.0, 60)
 ee_end = []
 yield_end = []
@@ -80,7 +80,7 @@ friction_dp_bar = []
 total_dp_bar = []
 conc_D_end = []
 
-t_eval_sweep = (0, 43200) # Đánh giá sau 12 giờ
+t_eval_sweep = (0, 43200) # Evaluation after 12 hours
 y0 = [0.0, 0.0, 1e-6, 1e-6, 0.0]
 
 for v in v_sweep:
@@ -94,15 +94,15 @@ for v in v_sweep:
     yield_end.append(sol_v.y[4][-1])
     conc_D_end.append(tot)
     
-    # Áp suất ma sát thủy lực
+    # Hydraulic friction pressure drop
     p_fric = calc_friction_dp(v) / 1e5
     friction_dp_bar.append(p_fric)
     
-    # Áp suất thẩm thấu với nồng độ mới bị ghìm thấp
+    # Osmotic pressure with suppressed concentration
     delta_C = R_prod * tot
     pi_osmotic = calc_osmotic_pressure(delta_C) / 1e5
     
-    # Tổng áp suất
+    # Total pressure
     total_dp_bar.append(p_fric + pi_osmotic)
 
 ee_end = np.array(ee_end)
@@ -110,45 +110,45 @@ friction_dp_bar = np.array(friction_dp_bar)
 total_dp_bar = np.array(total_dp_bar)
 conc_D_end = np.array(conc_D_end)
 
-# Xác định ranh giới cửa sổ an toàn mới
+# Determine boundaries of expanded safe window
 idx_safe = np.where(ee_end >= 95.0)[0]
 v_min_safe = v_sweep[idx_safe[0]] if len(idx_safe) > 0 else np.nan
 
 idx_burst_total = np.where(total_dp_bar >= 30.0)[0]
 v_max_real = v_sweep[idx_burst_total[0]] if len(idx_burst_total) > 0 else 25.0
 
-# --- 4. TRỰC QUAN HÓA ---
+# --- 4. VISUALIZATION ---
 plt.figure(figsize=(14, 6))
 ax = plt.subplot(1, 1, 1)
 ax_twin = ax.twinx()
 
-# Đường cong %ee
-line_ee = ax.plot(v_sweep, ee_end, 'b-', linewidth=2.5, label='Độ tinh khiết quang hoạt (%ee sau 12h)')
-ax.axhline(95.0, color='blue', linestyle=':', label='Ngưỡng yêu cầu $ee = 95\%$')
-ax.set_xlabel('Vận tốc dòng tuần hoàn $v_{loop}$ (m/s)', fontsize=12)
+# %ee Curve
+line_ee = ax.plot(v_sweep, ee_end, 'b-', linewidth=2.5, label='Optical Purity (%ee after 12h)')
+ax.axhline(95.0, color='blue', linestyle=':', label='Required Threshold $ee = 95\%$')
+ax.set_xlabel('Recirculation Loop Velocity $v_{loop}$ (m/s)', fontsize=12)
 ax.set_ylabel('Enantiomeric Excess (%)', color='b', fontsize=12)
 ax.tick_params(axis='y', labelcolor='b')
 ax.set_ylim([50, 101])
 ax.set_xlim([0, 25.0])
 
-# Đường cong áp suất
+# Pressure Curves
 line_p_fric = ax_twin.plot(v_sweep, friction_dp_bar, 'orange', linestyle='--', linewidth=2, 
-                           label='Áp suất ma sát thủy lực $\Delta P_{ma\_sat}$')
+                           label=r'Hydraulic Friction Pressure Drop $\Delta P_{friction}$')
 line_p_tot = ax_twin.plot(v_sweep, total_dp_bar, 'r-', linewidth=2.5, 
-                          label=r'Tổng áp suất màng: $\Delta P_{total} = \Delta P_{ma\_sat} + \Delta \pi$')
-ax_twin.axhline(30.0, color='darkred', linestyle='-.', linewidth=2.5, label='Giới hạn bền màng OSN (30 bar)')
-ax_twin.set_ylabel('Áp suất hiệu dụng (bar)', color='darkred', fontsize=12)
+                          label=r'Total Membrane Pressure: $\Delta P_{total} = \Delta P_{friction} + \Delta \pi$')
+ax_twin.axhline(30.0, color='darkred', linestyle='-.', linewidth=2.5, label='OSN Membrane Burst Pressure Limit (30 bar)')
+ax_twin.set_ylabel('Effective Pressure (bar)', color='darkred', fontsize=12)
 ax_twin.tick_params(axis='y', labelcolor='darkred')
 ax_twin.set_ylim([0, 50])
 
-# Vùng an toàn mở rộng
+# Expanded safe window
 ax.axvspan(v_min_safe, v_max_real, color='green', alpha=0.18, 
-           label=f'Cửa sổ an toàn mở rộng: [{v_min_safe:.2f} m/s $\\rightarrow$ {v_max_real:.2f} m/s]')
+           label=f'Expanded Safe Window: [{v_min_safe:.2f} m/s $\rightarrow$ {v_max_real:.2f} m/s]')
 
 ax.axvline(v_min_safe, color='green', linestyle='--', linewidth=2)
 ax.axvline(v_max_real, color='darkred', linestyle='--', linewidth=2)
 
-ax.set_title(r'Cửa sổ an toàn mở rộng khi khống chế $[D] \approx 0.3 - 0.4\text{ M}$ (Giảm $\Delta \pi$)', fontsize=13)
+ax.set_title(r'Expanded Safe Window by Suppressing $[D] \approx 0.3 - 0.4\text{ M}$ (Reducing $\Delta \pi$)', fontsize=13)
 ax.grid(True, linestyle='--', alpha=0.6)
 
 lines = line_ee + [ax.get_lines()[1]] + line_p_fric + line_p_tot + [ax_twin.get_lines()[2]]
@@ -158,6 +158,6 @@ ax.legend(lines, labels, loc='center right', framealpha=0.9)
 plt.tight_layout()
 plt.show()
 
-print(f"Nồng độ sản phẩm dừng trong bể: ~{conc_D_end[int(idx_safe[0])]:.2f} M")
-print(f"Áp suất thẩm thấu riêng phần Delta_pi: ~{calc_osmotic_pressure(0.98 * conc_D_end[int(idx_safe[0])]) / 1e5:.1f} bar")
-print(f"Cửa sổ vận tốc khả thi mới: [{v_min_safe:.2f} m/s --> {v_max_real:.2f} m/s]")
+print(f"Steady-state product concentration in tank: ~{conc_D_end[int(idx_safe[0])]:.2f} M")
+print(f"Partial osmotic pressure Delta_pi: ~{calc_osmotic_pressure(0.98 * conc_D_end[int(idx_safe[0])]) / 1e5:.1f} bar")
+print(f"New feasible velocity window: [{v_min_safe:.2f} m/s --> {v_max_real:.2f} m/s]")
