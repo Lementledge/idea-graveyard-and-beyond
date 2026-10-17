@@ -43,6 +43,8 @@ Every entry adheres to the schema defined in `templates/idea-template.md`, docum
 | [Reconstructive Attractor Dynamics](idea/algorithm/reconstructive-attractor-dynamics-neural-warmup.md) | Algorithm / Neurodynamics | Non-Equilibrium Stability & Analog Hardware Mismatch | `Formulated Hypothesis` |
 | [Decentralized Zero-Trust AGI Alignment](idea/algorithm/decentralized-zero-trust-agi-alignment.md) | Algorithm / Systems Alignment | Steganographic Invariant Bounds & Infrastructure Gating | `Formulated Hypothesis` |
 | [The Dual Bottleneck in Parallel DTMs](idea/algorithm/dual-bottleneck-parallel-dtm-np.md) | Algorithm / Complexity Theory | P-Complete Depth & Spatiotemporal Parallelism Bounds | `Formulated Hypothesis` |
+| [Aerodynamic Kinetic Transport Index](idea/nature/aerodynamic-kinetic-transport-index.md) | Nature / Applied Physics | Low-speed Friction Regularization & Field Testing | `Formulated Hypothesis` |
+
 
 
 ---
