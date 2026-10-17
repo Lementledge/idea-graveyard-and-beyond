@@ -42,8 +42,7 @@ Every entry adheres to the schema defined in `templates/idea-template.md`, docum
 | [The Feudal Hangover in East Asian Credentialism](idea/social/east-asian-credentialism-feudal-hangover.md) | Social / Institutional Economics | Quantifying Cultural Transmission Inertia | `Formulated Hypothesis` |
 | [Reconstructive Attractor Dynamics](idea/algorithm/reconstructive-attractor-dynamics-neural-warmup.md) | Algorithm / Neurodynamics | Non-Equilibrium Stability & Analog Hardware Mismatch | `Formulated Hypothesis` |
 | [Decentralized Zero-Trust AGI Alignment](idea/algorithm/decentralized-zero-trust-agi-alignment.md) | Algorithm / Systems Alignment | Steganographic Invariant Bounds & Infrastructure Gating | `Formulated Hypothesis` |
-| [Dual Architectural Asymmetry in DTM vs NTM](idea/algorithm/dual-architectural-asymmetry-dtm-ntm.md) | Algorithm / Complexity Theory | Non-Relativizing Circuit Bounds & P-Completeness | `Formulated Hypothesis` |
-
+| [The Dual Bottleneck in Parallel DTMs](idea/algorithm/dual-architectural-asymmetry-dtm-ntm.md) | Algorithm / Complexity Theory | P-Complete Depth & Spatiotemporal Parallelism Bounds | `Formulated Hypothesis` |
 
 
 ---
