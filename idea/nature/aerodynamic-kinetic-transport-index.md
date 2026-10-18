@@ -75,8 +75,8 @@ $$\text{Index}_{\text{reg}} = \frac{v^2}{(E/d) - C_{\text{rr}} \cdot m \cdot g} 
 ## 5. Artifacts & Reproducible Code
 
 The empirical dataset and numerical analysis are fully reproducible:
-- **Jupyter Notebook:** `idea/nature/models/aerodynamic-transport-index/100_cars_empirical_benchmark.ipynb`
-- **Technical Report:** `idea/nature/models/aerodynamic-transport-index/Bao_Cao_Kiem_Chung.pdf`
+- **Jupyter Notebook:** `simulations/aerodynamic-transport-index/reproducible_aerodynamic_transport_index.ipynb`
+- **Technical Report:** `simulations/aerodynamic-transport-index/Aerodynamic_Kinetic_Transport_Index_Report.pdf`
 - **Dependencies:** `numpy`, `pandas`, `matplotlib`
 
 ---
