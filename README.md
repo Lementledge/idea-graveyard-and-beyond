@@ -44,6 +44,7 @@ Every entry adheres to the schema defined in `templates/idea-template.md`, docum
 | [Decentralized Zero-Trust AGI Alignment](idea/algorithm/decentralized-zero-trust-agi-alignment.md) | Algorithm / Systems Alignment | Steganographic Invariant Bounds & Infrastructure Gating | `Formulated Hypothesis` |
 | [Modular Recursive AGI Architecture](idea/algorithm/modular-recursive-agi-architecture.md) | Algorithm / AGI Theory | Dynamic DSLs & Verifier Design | `Formulated Hypothesis` |
 | [Reconstructive Attractor Dynamics](idea/algorithm/reconstructive-attractor-dynamics-neural-warmup.md) | Algorithm / Neurodynamics | Non-Equilibrium Stability & Analog Hardware Mismatch | `Formulated Hypothesis` |
+| [The Duality of Generalized Computation](idea/algorithm/bennett-depth-kolmogorov-computational-duality.md) | Algorithm / Complexity & Info Theory | Bennett Depth vs. Kolmogorov Entropy Bounds | `Formulated Hypothesis` |
 | [The Dual Bottleneck in Parallel DTMs](idea/algorithm/dual-bottleneck-parallel-dtm-np.md) | Algorithm / Complexity Theory | P-Complete Depth & Spatiotemporal Parallelism Bounds | `Formulated Hypothesis` |
 | [The Feudal Hangover in East Asian Credentialism](idea/social/east-asian-credentialism-feudal-hangover.md) | Social / Institutional Economics | Quantifying Cultural Transmission Inertia | `Formulated Hypothesis` |
 
