@@ -46,6 +46,7 @@ Every entry adheres to the schema defined in `templates/idea-template.md`, docum
 | [Reconstructive Attractor Dynamics](idea/algorithm/reconstructive-attractor-dynamics-neural-warmup.md) | Algorithm / Neurodynamics | Non-Equilibrium Stability & Analog Hardware Mismatch | `Formulated Hypothesis` |
 | [The Duality of Generalized Computation](idea/algorithm/bennett-depth-kolmogorov-computational-duality.md) | Algorithm / Complexity & Architecture | Causal Dependency Chains vs. State Transport Costs | `Formulated Hypothesis` |
 | [The Dual Bottleneck in Parallel DTMs](idea/algorithm/dual-bottleneck-parallel-dtm-np.md) | Algorithm / Complexity Theory | P-Complete Depth & Spatiotemporal Parallelism Bounds | `Formulated Hypothesis` |
+| [The Frugality Matrix](idea/social/frugality-matrix-behavioral-optimization.md) | Social / Behavioral Economics & Decision Theory | Cognitive Depletion vs. Capital Optimization Bounds | `Formulated Hypothesis` |
 | [The Feudal Hangover in East Asian Credentialism](idea/social/east-asian-credentialism-feudal-hangover.md) | Social / Institutional Economics | Quantifying Cultural Transmission Inertia | `Formulated Hypothesis` |
 
 
