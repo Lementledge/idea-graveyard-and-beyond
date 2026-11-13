@@ -46,8 +46,8 @@ Every entry adheres to the schema defined in `templates/idea-template.md`, docum
 | [The Duality of Generalized Computation](idea/algorithm/bennett-depth-kolmogorov-computational-duality.md) | Algorithm / Complexity & Architecture | Causal Dependency Chains vs. State Transport Costs | `Formulated Hypothesis` |
 | [The Finite-Resource Leverage Matrix](idea/algorithm/generalized-finite-resource-leverage-matrix.md) | Algorithm / Systems Theory & Cybernetics | Target Yield vs. Non-Linear Buffer Depletion Bounds | `Formulated Hypothesis` |
 | [The Dual Bottleneck in Parallel DTMs](idea/algorithm/dual-bottleneck-parallel-dtm-np.md) | Algorithm / Complexity Theory | P-Complete Depth & Spatiotemporal Parallelism Bounds | `Formulated Hypothesis` |
-| [The Feudal Hangover in East Asian Credentialism](idea/social/east-asian-credentialism-feudal-hangover.md) | Social / Institutional Economics | Quantifying Cultural Transmission Inertia | `Formulated Hypothesis` |
 | [Computational Cybernetics of Management](idea/social/computational-cybernetics-organizational-management.md) | Social / Management Cybernetics | Human Psychological Resistance & Telemetry Noise | `Formulated Hypothesis` |
+| [The Feudal Hangover in East Asian Credentialism](idea/social/east-asian-credentialism-feudal-hangover.md) | Social / Institutional Economics | Quantifying Cultural Transmission Inertia | `Formulated Hypothesis` |
 | [The Four-Part Thermodynamic Mind](idea/social/four-part-thermodynamic-mind-architecture.md) | Social / Cognitive Science & Cybernetics | Metacognitive Telemetry & Ego-Reactor Regulation | `Formulated Hypothesis` |
 
 
