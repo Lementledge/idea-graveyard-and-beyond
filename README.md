@@ -37,7 +37,7 @@ Every entry adheres to the schema defined in `templates/idea-template.md`, docum
 
 | Title | Domain | Primary Bottleneck | Status |
 | :--- | :--- | :--- | :--- |
-| [The Unmanaged Sandbox: Thermodynamic Mind](idea/social/four-part-thermodynamic-mind-architecture.md) | Social / Cognitive Science & Cybernetics | Metacognitive Telemetry & Ego-Reactor Regulation | `Formulated Hypothesis` |
+| [The Unmanaged Sandbox: Thermodynamic Mind](idea/social/the-unmanaged-sandbox-thermodynamic-mind.md) | Social / Cognitive Architecture & Cybernetics | Four-Part Kernel & Taijitu Heat-Exchanger Flywheel | `Adopted` |
 | [Aerodynamic Kinetic Transport Index](idea/nature/aerodynamic-kinetic-transport-index.md) | Nature / Vehicle Dynamics | 100-Car Empirical Test & Regularized Index | `Toy Model Available` |
 | [Continuous Super-Dilution Asymmetric Synthesis](idea/nature/continuous-super-dilution-asymmetric-synthesis.md) | Nature / Chemistry | Wet-Lab Shear Validation | `Toy Model Available` |
 | [Priced Risk, Unpriced Trauma: CWDs & Community Well-Being](idea/social/priced-risk-unpriced-trauma-cwd-wellbeing.md) | Social / Labor Economics & Spatial Econometrics | Robinson's Fallacy & Non-Linear Hazard Tipping Points | `Toy Model Available` |
