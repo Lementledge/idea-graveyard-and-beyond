@@ -88,7 +88,7 @@ Mapping the Four-Part Kernel onto the geometry of the Taijitu solves the central
 
 ## 6. Artifacts & Publication Reference
 
-- **Archival Monograph Manuscript:** `Tuland-P1/idea-graveyard-and-beyond/tree/main/simulations/unmanaged-sandbox/The_Unmanaged_Sandbox_v1.3.2.pdf` (ISO B5 Gold Master Edition, published by Idea Vault Monographs).
+- **Archival Monograph Manuscript:** `simulations/unmanaged-sandbox/The_Unmanaged_Sandbox_v1.3.2.pdf` (ISO B5 Gold Master Edition, published by Idea Vault Monographs).
 - **Architectural Schematics:** Figure 1 (*Four-Part Kernel Architecture*) and Figure 2 (*Closed-Loop Thermodynamic Flywheel — Taijitu Heat Exchanger*).
 
 ---
